@@ -27,6 +27,25 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # config.action_mailer.delivery_method = :mailtrap
+  # config.action_mailer.mailtrap_settings = {
+  #   api_key: ENV.fetch('MAILTRAP_API_KEY')
+  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+  config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  # address: 'smtp.example.com',
+  # port: 1080,
+  # user_name: 'your_email@example.com',
+  # password: 'your_email_password',
+  # authentication: 'plain',
+  # enable_starttls_auto: true
+  # }
+
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 

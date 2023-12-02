@@ -1,0 +1,42 @@
+<h1>Edit Product</h1>
+
+<%= form_for [@product] do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :images %>
+    <%= f.text_area :images %>
+  </div>
+
+  <div>
+    <%= f.label :launch_date %>
+    <%= f.date_field :launch_date %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div>
+    <%= f.label :currency %>
+    <%= f.text_area :currency %>
+  </div>
+
+  <div>
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+  </div>
+
+  <div>
+    <%= f.submit 'Update Product' %>
+  </div>
+<% end %>
