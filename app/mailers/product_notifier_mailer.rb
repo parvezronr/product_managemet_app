@@ -8,4 +8,11 @@ class ProductNotifierMailer < ApplicationMailer
 
     mail(to: @user.email, subject: 'Product Status Change Notification')
   end
+
+  def new_product_notification(user, product_id)
+    @product = Product.find(product_id)
+    @user = user
+
+    mail(to: @user.email, subject: 'New Product Launch Notification')
+  end
 end
