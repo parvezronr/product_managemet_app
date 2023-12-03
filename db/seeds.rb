@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#sample product details
 Product.create!([{ name: 'Laptop',
 	description: 'Electronic device',
 	images: 'Not avilble',
@@ -18,9 +12,38 @@ Product.create!([{ name: 'Laptop',
 	launch_date: Date.today,
 	price: 44000.00,
 	currency: 'INR',
+	active: true },
+	{ name: 'Reading Table',
+	description: 'Furniture',
+	images: 'Not avilble',
+	launch_date: Date.today,
+	price: 7000.00,
+	currency: 'INR',
+	active: true },
+	{ name: 'Wallframe',
+	description: 'Home improvements',
+	images: 'Not avilble',
+	launch_date: Date.today,
+	price: 450.00,
+	currency: 'INR',
+	active: true },
+	{ name: 'Formal Shoes',
+	description: 'Footware',
+	images: 'Not avilble',
+	launch_date: Date.today,
+	price: 1999.00,
+	currency: 'INR',
 	active: true }])
 
-User.create!([{name: 'Justin',
+#sample user data with admin details
+User.create!([{name: 'Administrator',
+	email: 'admin_7@gmail.com',
+	address: 'New York',
+	country: 'USA',
+	timezone: 'America/Los_Angeles',
+	password: '123456',
+	admin: true},
+	{name: 'Justin',
 	email: 'Justin@gmail.com',
 	address: 'California',
 	country: 'USA',

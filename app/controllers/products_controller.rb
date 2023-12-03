@@ -11,7 +11,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    # Find the product to be updated
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
